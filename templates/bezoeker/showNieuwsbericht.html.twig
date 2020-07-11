@@ -1,0 +1,50 @@
+{%  extends '/base.html.twig' %}
+  {% block head %}
+      <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+      <link rel="stylesheet" type="text/css" href="/ewa.css"/>
+  {% endblock %}
+{% block headerintro %}
+<section class="nieuwsOverzicht">
+    <div class="container text-center" >
+        <div class="title">
+            <div class="row justify-center-md-center">
+                <div class="col-md-12 col-lg-12 col-sm-6 ">
+                    <h2>{{nieuwsbericht.title}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" >
+
+        <div class="row justify-center-md-center">
+
+                    <!--    start  nieuwsbericht -->
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+                   <div class="container">
+
+                        <img class="card-img-top" src="/images/news/{{ nieuwsbericht.img }}" alt="Card image cap" />
+                            <div class="card-body">
+                                <h5>{{ nieuwsbericht.created|date('d-m-Y') }}</h5>
+                                <p >{{nieuwsbericht.content}}</p>
+                            </div>
+
+
+                    </div>
+                </div>
+                <!--    einde  nieuwsbericht -->
+        </div>
+
+
+
+</div>
+</section>
+{% endblock %}
+
+
+
+

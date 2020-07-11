@@ -1,0 +1,100 @@
+{%  extends 'base.html.twig' %}
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="ewa.css"/>
+{% endblock %}
+{% block headerintro %}
+<section class="nieuwsOverzicht">
+    <div class="container text-center" >
+        <div class="title">
+            <div class="row justify-center-md-center">
+                <div class="col-md-12 col-lg-12 col-sm-6 ">
+                    <h2>Inloggen</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{#inlogformulier#}
+<section class="login" >
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="contactIntro text-center">
+                <h2 class="title" >
+                    {% if app.user %}
+                        <div class="row"><div class="col-lg-12 ml-auto mr-auto col-md-12">
+                            U bent ingelogd als {{ app.user.username }}, <a href="{{ path('app_logout') }}">Uitloggen.</a>
+                        </div>
+                    {% endif %}</h2>
+                <p
+                        class="description"
+                        style="color:black; margin-bottom:2.5%"
+                >Vult u uw gegevens in:</p>
+            </div>
+{#            {% if error %}#}
+{#                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>#}
+{#            {% endif %}#}
+
+{#            {% if app.user %}#}
+{#                <div class="mb-3">#}
+{#                    You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>#}
+{#                </div>#}
+{#            {% endif %}#}
+
+{#            <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>#}
+{#            <label for="inputEmail">Email</label>#}
+{#            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>#}
+{#            <label for="inputPassword">Password</label>#}
+{#            <input type="password" name="password" id="inputPassword" class="form-control" required>#}
+
+{#            <input type="hidden" name="_csrf_token"#}
+{#                   value="{{ csrf_token('authenticate') }}"#}
+{#            >#}
+
+            <form method="post" class="form-control">
+            {% if error %}
+                <div class="my-custom-class-for-errors">
+                    <div class="row">
+                        <div class="col-lg-12 ml-auto mr-auto col-md-12">{{ error.messageKey|trans(error.messageData, 'security') }}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+
+                <div class="my-custom-class-for-errors">
+                <div class="row">
+
+                    <div class="col-lg-12 ml-auto mr-auto col-md-12">
+                        <div class="row">
+                            <label for="inputUsername" class="col-sm-2 col-form-label">Inlognaam</label>
+                            <input type="text" value="{{ last_username }}" name="login" id="inputUsername" class="big_form" required autofocus>
+                        </div>
+                        <div class="row">
+                            <label for="inputPassword" class="col-sm-2 col-form-label">Wachtwoord</label>
+                            <input type="password" name="password" id="inputPassword" class="big_form" required>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 ml-auto mr-auto col-md-12">
+                                <input type="hidden" name="_csrf_token"   value="{{ csrf_token('authenticate') }}" >
+                                <div style="margin-bottom:2%; margin-top:2%;text-align: center">
+                                    <button  type="submit" class="login">
+                                        Inloggen
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- einde inlogformulier-->
+
+
+
+{% endblock %}

@@ -1,0 +1,4 @@
+App\Entity\Post:
+  imageFile:
+    mapping: image        # required
+    filename_property: imageFile  # required

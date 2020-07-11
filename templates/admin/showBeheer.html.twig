@@ -1,0 +1,38 @@
+{%  extends 'base.html.twig' %}
+  {% block head %}
+      <link rel="stylesheet" type="text/css" href="/slick/slick.css"/>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="/slick/slick-theme.css"/>
+      <link rel="stylesheet" type="text/css" href="/ewa.css"/>
+  {% endblock %}
+{% block headerintro %}
+
+<section class="nieuwsOverzicht">
+    <div class="container text-center" >
+        <div class="title">
+            <div class="row justify-center-md-center">
+                <div class="col-md-12 col-lg-12 col-sm-6 ">
+                    <h2>BEHEER</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container" >
+    <section class="nieuwsberichten">
+        <div class="row justify-center-md-center">
+
+            <a href="{{ path('beheerNieuws') }}"><button>Nieuws</button></a>
+            <a href="{{ path('beheerPartners') }}"><button>Partners</button></a>
+            <a href="{{ path('beheerInformatie') }}"><button>Informatie</button></a>
+        </div>
+
+    </section>
+
+</div>
+</section>
+{% endblock %}
+
+
+
+

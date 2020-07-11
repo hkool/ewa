@@ -1,0 +1,34 @@
+
+
+@import 'now-ui-kit/variables';
+@import 'now-ui-kit/mixins';
+
+// Core CSS
+@import "now-ui-kit/buttons";
+@import "now-ui-kit/pagination";
+@import "now-ui-kit/typography";
+@import "now-ui-kit/misc";
+@import "now-ui-kit/pills";
+
+// components
+@import "now-ui-kit/nucleo-outline";
+@import "now-ui-kit/navbar";
+@import "now-ui-kit/dropdown";
+@import "now-ui-kit/popups";
+ 
+// Cards
+@import "now-ui-kit/cards";
+@import "now-ui-kit/cards/card-plain";
+@import "now-ui-kit/cards/card-signup";
+
+// Sections
+@import "now-ui-kit/sections";
+
+
+@import "now-ui-kit/responsive";
+
+// Element UI plugins
+@import "now-ui-kit/element-ui-plugins/carousel";
+@import "now-ui-kit/element-ui-plugins/date_picker";
+@import "now-ui-kit/element-ui-plugins/tooltip";
+@import "now-ui-kit/element-ui-plugins/popover";
