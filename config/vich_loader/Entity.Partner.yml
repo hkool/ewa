@@ -1,0 +1,4 @@
+App\Entity\Partner:
+  imageFile:
+    mapping: image        # required
+    filename_property: imageFile  # required

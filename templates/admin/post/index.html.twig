@@ -1,36 +1,59 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}Post index{% endblock %}
+{% block title %}Nieuwsoverzicht{% endblock %}
 
 {% block body %}
-    <h1>Post index</h1>
+<section class="nieuwsOverzicht">
+    <div class="container text-center" >
+        <div class="title">
+            <div class="row justify-center-md-center">
+                <div class="col-md-12 col-lg-12 col-sm-6 ">
+                    <h2>BEHEER</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="nieuwsberichten">
+    <div class="container" >
+        <div class="row justify-center-md-center">
 
-    <table class="table">
+            <a href="{{ path('beheerNieuws') }}"><button>Nieuws</button></a>
+            <a href="{{ path('beheerPartners') }}"><button>Partners</button></a>
+            <a href="{{ path('beheerInformatie') }}"><button>Informatie</button></a>
+            <a href="{{ path('beheerContacten') }}"><button>Contacten</button></a>
+        </div>
+        <div class="title beheerPortal">
+            <div class="container text-center" >
+                <div class="row justify-center-md-center">
+                    <div class="col-md-12 col-lg-12 col-sm-6 ">
+                        <h2>Nieuws</h2></div></div></div>
+        </div>
+
+        <a href="{{ path('post_new') }}"><button class="beheer">Toevoegen</button></a>
+    </div></section>
+    <div class="container " >
+    <table class="table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Title</th>
-                <th>Content</th>
-                <th>Reaction</th>
-                <th>Img</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>actions</th>
+                <th>Titel</th>
+                <th>Inhoud</th>
+                <th>Afbeelding</th>
+
+                <th> </th>
             </tr>
         </thead>
         <tbody>
         {% for post in posts %}
             <tr>
-                <td>{{ post.id }}</td>
-                <td>{{ post.title }}</td>
+                 <td><a href="{{ path('post_show', {'id': post.id}) }}">{{ post.title }}</a></td>
                 <td>{{ post.content }}</td>
-                <td>{{ post.reaction }}</td>
-                <td><img src="{{  vich_uploader_asset(post, 'imageFile') }}" alt="{{ post.title }}" /></td>
-                <td>{{ post.created ? post.created|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ post.updated ? post.updated|date('Y-m-d H:i:s') : '' }}</td>
+                <td><div class="beheer"><img src="/public/{{  vich_uploader_asset(post, 'imageFile') }}" alt="{{ post.title }}" /></div></td>
+
                 <td>
-                    <a href="{{ path('post_show', {'id': post.id}) }}">show</a>
-                    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
+                    <a href="{{ path('post_edit', {'id': post.id}) }}"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;edit</i></a><br />
+                    <a href="{{ path('post_delete', {'id': post.id}) }}" onclick="return confirm('Weet u zeker dat u dit item wilt verwijderen?');"><i class="fa fa-trash " aria-hidden="true">&nbsp;delete</i></a>
+
                 </td>
             </tr>
         {% else %}
@@ -40,6 +63,6 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 
-    <a href="{{ path('post_new') }}">Create new</a>
 {% endblock %}

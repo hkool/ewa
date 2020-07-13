@@ -17,15 +17,6 @@ use Symfony\Component\Routing\Annotation\Route;
  */
 class PostController extends AbstractController
 {
-    /**
-     * @Route("/", name="post_index", methods={"GET"})
-     */
-    public function index(PostRepository $postRepository): Response
-    {
-        return $this->render('admin/post/index.html.twig', [
-            'posts' => $postRepository->findAll(),
-        ]);
-    }
 
     /**
      * @Route("/new", name="post_new", methods={"GET","POST"})
@@ -47,34 +38,15 @@ class PostController extends AbstractController
             if (empty($content)) {
                 throw new BadRequestHttpException('content cannot be empty');
             }
-
-//            $img = $form->get('imageFile')->getData();
-//            $post->setTitle($title);
-//            $post->setContent($content);
-//            define('UPLOAD_DIR', 'images/news/');
-//            $post->setImage($img);
-//            $img = $post->getImg($img);
-//            $img = str_replace('data:image/jpeg;base64,', '', $img);
-//            $img = str_replace('data:image/png;base64,', '', $img);
-//            $img = str_replace(' ', '+', $img);
-//            $data = base64_decode($img);
-//            $file = uniqid() . '.jpeg';
-//            $read = UPLOAD_DIR . $file;
-//            $success = file_put_contents($read, $data);
-//            $post->setImg($file);
-
             $this->getDoctrine()->getManager()->persist($post);
             $this->getDoctrine()->getManager()->flush();
-            return $this->redirectToRoute('post_index');
-
+            return $this->redirectToRoute('beheerNieuws');
         }
             return $this->render('admin/post/new.html.twig', [
                 'post' => $post,
                 'form' => $form->createView(),
             ]);
         }
-
-
 
     /**
      * @Route("/{id}/edit", name="post_edit", methods={"GET","POST"})
@@ -84,36 +56,30 @@ class PostController extends AbstractController
         $form = $this->createForm(PostType::class, $post);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-
-//
-//                $img=$form->get('img')->getData();
-//                $originalFilename = pathinfo($img->getClientOriginalName(), PATHINFO_BASENAME);
-//                // this is needed to safely include the file name as part of the URL
-//                $safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
-//                $newFilename = $safeFilename . '-' . uniqid() . '.' . $img->guessExtension();
-//
-//                // Move the file to the directory where brochures are stored
-//                try {
-//                    $img->move(
-//                        $this->getParameter('images_directory'),
-//                        $newFilename
-//                    );
-//                } catch (FileException $e) {
-//                    // ... handle exception if something happens during file upload
-//                }
-//                $post->setImg($newFilename);
-
+        if ($form->isSubmitted() && $form->isValid())
+        {
             $this->getDoctrine()->getManager()->persist($post);
             $this->getDoctrine()->getManager()->flush();
-            return $this->redirectToRoute('post_index');
-    }
-
-
+            return $this->redirectToRoute('beheerNieuws');
+        }
         return $this->render('admin/post/edit.html.twig', [
             'post' => $post,
             'form' => $form->createView(),
         ]);
+    }
+    /**
+ * @Route("/{id}", name="post_delete", methods={"DELETE"})
+ */
+    public function delete(Request $request, $id): Response
+    {
+        $post=$this->getDoctrine()->getRepository(Post::class)->find($id);
+        if ($this->isCsrfTokenValid('delete'.$post->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($post);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('beheerNieuws');
     }
     /**
      * @Route("/{id}", name="post_show", methods={"GET"})
@@ -125,17 +91,5 @@ class PostController extends AbstractController
         ]);
     }
 
-    /**
-     * @Route("/{id}", name="post_delete", methods={"DELETE"})
-     */
-    public function delete(Request $request, Post $post): Response
-    {
-        if ($this->isCsrfTokenValid('delete'.$post->getId(), $request->request->get('_token'))) {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->remove($post);
-            $entityManager->flush();
-        }
 
-        return $this->redirectToRoute('post_index');
-    }
 }

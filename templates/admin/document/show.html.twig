@@ -1,40 +1,52 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}Document{% endblock %}
+{% block title %}Artikelen{% endblock %}
 
 {% block body %}
-    <h1>Document</h1>
+    <section class="nieuwsOverzicht">
+        <div class="container text-center" >
+            <div class="title">
+                <div class="row justify-center-md-center">
+                    <div class="col-md-12 col-lg-12 col-sm-6 ">
 
+                        <h2></h2></div></div></div></div>
+    </section>
+<div class="container " >
     <table class="table">
         <tbody>
+
             <tr>
-                <th>Id</th>
-                <td>{{ document.id }}</td>
-            </tr>
-            <tr>
-                <th>Name</th>
+                <th>Titel</th>
                 <td>{{ document.name }}</td>
             </tr>
             <tr>
-                <th>Description</th>
+                <th>Inhoud</th>
                 <td>{{ document.description }}</td>
             </tr>
             <tr>
-                <th>File</th>
+                <th>Document</th>
                 <td><a href="/images/doc/{{ document.file }}"><button class="big_form">View brochure (PDF)</button></a></td>
             </tr>
             <tr>
-                <th>Created</th>
+                <th>Aangemaakt</th>
                 <td>{{ document.created ? document.created|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
             <tr>
-                <th>Updated</th>
+                <th>Gewijzigd</th>
                 <td>{{ document.updated ? document.updated|date('Y-m-d H:i:s') : '' }}</td>
             </tr>
         </tbody>
     </table>
 
-   <a href="{{ path('document_edit', {'id': document.id}) }}">edit</a>
+    <div class="nieuwsberichten">
+        <a href="{{ path('document_edit', {'id': document.id}) }}">
+            <button style="margin-left:0px">Wijzigen</button></a>
+        <a href="{{ path('beheerInformatie') }}">
+            <button style="margin-left:0px">Naar Overzicht</button></a>
+    </div>
+
 
     {{ include('admin/document/_delete_form.html.twig') }}
+
+</div>
 {% endblock %}

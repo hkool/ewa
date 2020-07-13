@@ -57,7 +57,13 @@ class Post
      * @var string|null
      */
     private $image;
-
+    /**
+     *
+     * @Vich\UploadableField(mapping="imageFile", fileNameProperty="image")
+     *
+     *
+     */
+    protected $imageFile;
     /**
      * @return mixed
      */
@@ -74,13 +80,7 @@ class Post
         $this->imageFile = $imageFile;
     }
 
-    /**
-     *
-     * @Vich\UploadableField(mapping="imageFile", fileNameProperty="image")
-     *
-     *
-     */
-    protected $imageFile;
+
 
     /**
      * @ORM\Column(name="updated", type="datetime", nullable=true)

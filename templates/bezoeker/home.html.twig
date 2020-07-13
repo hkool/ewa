@@ -1,10 +1,5 @@
 {%  extends 'base.html.twig' %}
-  {% block head %}
-      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-      <link rel="stylesheet" type="text/css" href="ewa.css"/>
-  {% endblock %}
+
 {% block headerintro %}
 <div class="page-header clear-filter">
     <img src="images/EWAHaaglanden_bg.jpg" alt="EWA Haaglanden">
@@ -53,11 +48,11 @@
                      <div class="container">
                          <div class="card-deck">
                          {% for nieuws in nieuwsberichten %}
-                         <div class="card">
+                         <div class="card col-sm-12 col-lg-3 col-sm-6 ">
                              <img class="card-img-top" src="images/news/{{ nieuws.image}}" alt="Card image cap">
                              <div class="card-img-overlay">
                                  <h5 class="card-title">{{nieuws.title}}</h5>
-                                 <p class="card-text"><small class="text-muted"><a href="{{ path('showNieuws', {id: nieuws.id}) }}">Lees meer...</a></small></p>
+                                 <p class="card-text"><small class="text-muted"><a href="{{ path('showNieuwsdetail', {id: nieuws.id}) }}">Lees meer...</a></small></p>
                              </div>
                          </div>
                          {% endfor %}
@@ -143,31 +138,27 @@
 
 {% block partners %}
 <!--    begin partners slider-->
-<section class="partner">
+<section class="nieuwsOverzicht">
     <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="contactIntro text-center">
-                <h2 class="title" >ONZE PARTNERS</h2>
-                <div class="fotocontainer">
-                    <div class="photobanner">
-                        {%  set first=true %}
-                        {% for partner in partners %}
+                <h2 class="title" >ONZE PARTNERS</h2></div></div></div></section>
+    <div class="fotocontainer">
+        <div class="photobanner">
+            {%  set first=true %}
+            {% for partner in partners %}
 
-                            {% if first == true  %}
-                                <img class="first" src="images/logo/{{ partner.img }}">
-                                {% set first= false %}
-                            {%  else %}
-                                <img src="images/logo/{{ partner.img }}">
-                            {%  endif %}
+                {% if first == true  %}
+                    <img class="first" src="{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />>
+                    {% set first= false %}
+                {%  else %}
+                    <img src="{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />>
+                {%  endif %}
 
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-
     </div>
-</section>
+
 <!--    einde partners slider-->
 
 

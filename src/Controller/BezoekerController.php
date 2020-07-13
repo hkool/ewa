@@ -38,55 +38,53 @@ class BezoekerController extends AbstractController
         $contact = new Contact();
         $form = $this->createForm(ContactType::class, $contact);
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid()) {
 
+        if ($form->isSubmitted() && $form->isValid())
+        {
+
+// create new contact
             $contact = $form->getData();
+            $name = $form->get('name')->getData();
             if (empty($name)) {
                 throw new BadRequestHttpException('name cannot be empty');
             }
-
-            $email = $request->request->get('email');
+            $email = $form->get('email')->getData();
             if (empty($email)) {
                 throw new BadRequestHttpException('email cannot be empty');
             }
-            $message = $request->request->get('message');
+            $message = $form->get('message')->getData();
             if (empty($message)) {
                 throw new BadRequestHttpException('message cannot be empty');
             }
-            $subscribed = $request->request->get('subscribed');
-
+// contact wishes to receive newsletter
+            $subscribed = $form->get('subscribed')->getData();
             $contact->setName($name);
             $contact->setEmail($email);
             $contact->setMessage($message);
             $contact->setSubscribed($subscribed);
+// make email
+            $message = (new \Swift_Message('Hello Email'))
+                ->setFrom($email)
+                ->setTo('ewa@jkoolhf422.422.axc.nl')
+                ->setBody(
+                    $this->renderView(
+                    // templates/emails/registration.html.twig
+                        'emails/registration.html.twig',
+                        ['name' => $name]
+                    ),
+                    'text/html'
+                )
+            ;
 
-            // Create the message
-            $letter = (new \Swift_Message())
-
-                // Give the message a subject
-                ->setSubject($email)
-
-                // Set the From address with an associative array
-                ->setFrom([$email => $name])
-
-                // Set the To addresses with an associative array (setTo/setCc/setBcc)
-                ->setTo(['ewahaaglanden@rocmondriaan.nl' => 'Ewa Haaglanden'])
-
-                // Give it a body
-                ->setBody($message);
-
-            $mailer->send($letter);
-
-            $this->em->persist($contact);
-            $this->em->flush();
+            $mailer->send($message);
+            $this->getDoctrine()->getManager()->persist($contact);
+            $this->getDoctrine()->getManager()->flush();
         }
-
-
-            return $this->render('bezoeker/home.html.twig', [
-                'form' => $form->createView(),
-                'nieuwsberichten' => $nieuwsberichten,
-                'partners'=>$partners
-            ]);
+        return $this->render('bezoeker/home.html.twig', [
+            'form' => $form->createView(),
+            'nieuwsberichten' => $nieuwsberichten,
+            'partners'=>$partners
+        ]);
 
     }
     /**

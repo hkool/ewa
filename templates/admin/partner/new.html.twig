@@ -1,11 +1,21 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}New Partner{% endblock %}
+{% block title %}Nieuwe Partner{% endblock %}
 
 {% block body %}
-    <h1>Create new Partner</h1>
+<section class="nieuwsOverzicht">
+<div class="container text-center" >
+    <div class="title">
+        <div class="row justify-center-md-center">
+            <div class="col-md-12 col-lg-12 col-sm-6 ">
+                <h2></h2></div></div></div></div>
+                </section>
+<div class="container " >
+    {{ include('admin/partner/_form.html.twig') }}
+    <div class="nieuwsberichten">
+        <a href="{{ path('beheerPartners') }}">
+            <button style="margin-left:0px">Naar Overzicht</button></a>
+    </div>
 
-    {{ include('partner/_form.html.twig') }}
-
-    <a href="{{ path('partner_index') }}">back to list</a>
+</div>
 {% endblock %}

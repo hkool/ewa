@@ -1,11 +1,18 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}New Document{% endblock %}
+{% block title %}Nieuw artikel{% endblock %}
 
 {% block body %}
-    <h1>Create new Document</h1>
-
+    <section class="nieuwsOverzicht">
+        <div class="container text-center" >
+            <div class="title">
+                <div class="row justify-center-md-center">
+                    <div class="col-md-12 col-lg-12 col-sm-6 ">
+                        <h2> </h2></div></div></div></div>
+    </section>
+<div class="container " >
     {{ include('admin/document/_form.html.twig') }}
 
     <a href="{{ path('document_index') }}">back to list</a>
+</div>
 {% endblock %}

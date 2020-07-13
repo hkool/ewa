@@ -1,7 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7880583-5491-4280-88e7-78599e7bf657" name="Default Changelist" comment="" />
+    <list default="true" id="c7880583-5491-4280-88e7-78599e7bf657" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config/vich_loader/Entity.Partner.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/admin/contact/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/subbase.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/subsubbase.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Ewa-Haaglanden-pure symfony.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Ewa-Haaglanden-pure symfony.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/App.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/api/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/api/document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/api/partner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/api/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/api/security.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/demo/demo.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/fonts/nucleo-license.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/fonts/nucleo-outline.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/fonts/nucleo-outline.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/fonts/nucleo-outline.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/fonts/nucleo-outline.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/angular.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/chrome.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/edge.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/firefox.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/html.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/opera.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/safari.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/github/vuejs.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_alerts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_badges.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_cards.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_example-pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_footers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_images.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_misc.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_nucleo-outline.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_pagination.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_pills.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_popups.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_progress.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_responsive.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_sections.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_tabs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_typography.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/cards/_card-plain.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/cards/_card-signup.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/element-ui-plugins/_carousel.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/element-ui-plugins/_date_picker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/element-ui-plugins/_popover.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/element-ui-plugins/_tooltip.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_angled-edges.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_badges.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_buttons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_cards.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_datepicker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_dropdown.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_inputs.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_navbar.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_pages.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_popovers.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_transparency.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/mixins/_vendor-prefixes.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/plugins/_plugin-bootstrap-switch.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/plugins/_plugin-datepicker.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/assets/scss/now-ui-kit/plugins/_plugin-nouislider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Button.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Cards/Card.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Collapse/Collapse.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Collapse/CollapseItem.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Dropdown.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Inputs/Checkbox.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Inputs/Radio.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Inputs/formGroupInput.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Navbar/NavLink.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Navbar/Navbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Navbar/NavbarToggleButton.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Pagination.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/Parallax.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/components/partnerSlider.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/directives/click-ouside.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/directives/trim-whitespace.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/layout/MainFooter.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/layout/MainNavbar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/Dashboard.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/DashboardCreationDocument.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/DashboardCreationPartner.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/DashboardCreationPost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/DashboardEditDocuments.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/DashboardEditPartners.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/DashboardEditPosts.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/Documents.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/Index.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/Login.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/Partners.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/PostDetails.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/Posts.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Contact/DashboardContacts.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Document/DashboardCreateDocument.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Document/DashboardDocuments.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Document/DashboardEditDocument.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Document/DashboardFormEditDocument.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Document/Document.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/ErrorMessage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Index/ContactUsSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Index/NewsSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Index/PartnerSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Index/VideoSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/IntroductionSection.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Partner/DashboardCreatePartner.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Partner/DashboardEditPartner.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Partner/DashboardFormEditPartner.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Partner/DashboardPartners.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Partner/Partner.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Post/DashboardCreatePost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Post/DashboardEditPost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Post/DashboardFormEditPost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Post/DashboardPosts.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Post/NewsPagePost.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/pages/components/Post/Post.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/plugins/globalComponents.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/plugins/globalDirectives.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/plugins/globalMixins.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/plugins/now-ui-kit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/router.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/store/contact.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/store/document.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/store/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/store/partner.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/store/post.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/vue/store/security.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/babel.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/assets.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/prod/webpack_encore.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/ramsey_uuid_doctrine.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/test/webpack_encore.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/webpack_encore.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/ewa.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/ewa.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/doc/2hhorstpdf-5f09bde85b02f.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/doc/urenregistratienouvelelmasoudipdf-5f09c24091190.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo/5ea5935cb478b.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/logo/5ea5938dcab93.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/news/5eb9080674535.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/news/intranet-5f0a32ee00e8e636468100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/news/intranetpng-5f09d24599ea9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/news/intranetpng-5f09d281d3a6d.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/BezoekerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/BezoekerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ContactController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ContactController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/DocumentControllerOUD.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PartnerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/SearchController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/VueController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Contact.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Partner.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Partner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/DocumentType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/DocumentType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PartnerType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PartnerType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/PostType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/PostType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/document/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/document/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/document/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/document/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/document/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/document/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/document/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/document/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/document/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/document/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/document/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/document/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/partner/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/partner/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/_delete_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/_delete_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/_form.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/_form.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/edit.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/edit.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/new.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/show.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/showBeheer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/showBeheer.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/showInformatie.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/showInformatie.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/showNieuwsbericht.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/showNieuwsbericht.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/showNieuwsberichten.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/showNieuwsberichten.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/bezoeker/showPartners.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bezoeker/showPartners.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vue.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/{" beforeDir="false" afterPath="$PROJECT_DIR$/templates/emails/registration.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +231,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -75,7 +290,6 @@
       <path value="$PROJECT_DIR$/vendor/symfony/web-server-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/web-profiler-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/yaml" />
-      <path value="$PROJECT_DIR$/vendor/symfony/webpack-encore-bundle" />
       <path value="$PROJECT_DIR$/vendor/doctrine/annotations" />
       <path value="$PROJECT_DIR$/vendor/doctrine/coding-standard" />
       <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
@@ -93,10 +307,8 @@
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
       <path value="$PROJECT_DIR$/vendor/doctrine/persistence" />
       <path value="$PROJECT_DIR$/vendor/doctrine/orm" />
-      <path value="$PROJECT_DIR$/vendor/easycorp/easy-log-handler" />
       <path value="$PROJECT_DIR$/vendor/doctrine/reflection" />
       <path value="$PROJECT_DIR$/vendor/ocramius/proxy-manager" />
-      <path value="$PROJECT_DIR$/vendor/ocramius/package-versions" />
       <path value="$PROJECT_DIR$/vendor/squizlabs/php_codesniffer" />
       <path value="$PROJECT_DIR$/vendor/slevomat/coding-standard" />
       <path value="$PROJECT_DIR$/vendor/webimpress/safe-writer" />
@@ -121,12 +333,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/log" />
       <path value="$PROJECT_DIR$/vendor/vich/uploader-bundle" />
       <path value="$PROJECT_DIR$/vendor/twig/twig" />
-      <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
-      <path value="$PROJECT_DIR$/vendor/brick/math" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid-doctrine" />
-      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
       <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
       <path value="$PROJECT_DIR$/vendor/sensio/framework-extra-bundle" />
       <path value="$PROJECT_DIR$/vendor/laminas/laminas-eventmanager" />
@@ -155,9 +362,13 @@
       <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
       <path value="$PROJECT_DIR$/vendor/symfony/finder" />
       <path value="$PROJECT_DIR$/vendor/symfony/filesystem" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/sql-formatter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
     </include_path>
   </component>
   <component name="ProjectId" id="1dlbBucd2vlMxtl0UhuQOAI4QED" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -166,8 +377,9 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates/admin/partner" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/templates" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -175,18 +387,19 @@
     <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates" />
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\var\log" />
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\bezoeker" />
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\admin\contact" />
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\public\css" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates" />
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\admin\post" />
+      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\public\css" />
       <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\admin\document" />
       <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\admin" />
-      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\src\Security" />
-      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\admin\partner" />
-      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\admin" />
-      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\templates\security" />
-      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\src\Security" />
-      <recent name="C:\xampp\htdocs\Ewa-Haaglanden-master2.2\config\packages" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -213,7 +426,12 @@
       <workItem from="1594279445706" duration="2754000" />
       <workItem from="1594291859974" duration="7820000" />
       <workItem from="1594367250698" duration="594000" />
-      <workItem from="1594410888400" duration="34676000" />
+      <workItem from="1594410888400" duration="35518000" />
+      <workItem from="1594536115500" duration="11314000" />
+      <workItem from="1594550164755" duration="1300000" />
+      <workItem from="1594561115283" duration="21712000" />
+      <workItem from="1594618519947" duration="14271000" />
+      <workItem from="1594639647535" duration="3519000" />
     </task>
     <servers />
   </component>
@@ -221,22 +439,26 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="473" y="217" key="#com.intellij.ide.util.MemberChooser" timestamp="1594503293830">
+    <state x="582" y="322" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1594536286131">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
-    <state x="473" y="217" key="#com.intellij.ide.util.MemberChooser/64.0.1472.1024@64.0.1472.1024" timestamp="1594503293830" />
+    <state x="582" y="322" key="#com.intellij.fileTypes.FileTypeChooser/64.0.1472.1024@64.0.1472.1024" timestamp="1594536286131" />
+    <state x="473" y="217" key="#com.intellij.ide.util.MemberChooser" timestamp="1594544027535">
+      <screen x="64" y="0" width="1472" height="1024" />
+    </state>
+    <state x="473" y="217" key="#com.intellij.ide.util.MemberChooser/64.0.1472.1024@64.0.1472.1024" timestamp="1594544027535" />
     <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1594411722178">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
     <state x="368" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/64.0.1472.1024@64.0.1472.1024" timestamp="1594411722178" />
-    <state x="531" y="290" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594475316753">
+    <state x="531" y="290" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1594538049462">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
-    <state x="531" y="290" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/64.0.1472.1024@64.0.1472.1024" timestamp="1594475316753" />
-    <state x="581" y="273" key="FileChooserDialogImpl" timestamp="1594280842280">
+    <state x="531" y="290" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/64.0.1472.1024@64.0.1472.1024" timestamp="1594538049462" />
+    <state x="581" y="273" key="FileChooserDialogImpl" timestamp="1594579307097">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
-    <state x="581" y="273" key="FileChooserDialogImpl/64.0.1472.1024@64.0.1472.1024" timestamp="1594280842280" />
+    <state x="581" y="273" key="FileChooserDialogImpl/64.0.1472.1024@64.0.1472.1024" timestamp="1594579307097" />
     <state x="551" y="367" key="NewPhpClassDialog" timestamp="1594498397546">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
@@ -245,17 +467,17 @@
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
     <state x="316" y="143" key="SettingsEditor/64.0.1472.1024@64.0.1472.1024" timestamp="1594474374332" />
-    <state x="509" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1594410997069">
+    <state x="509" y="345" key="com.intellij.ide.util.TipDialog" timestamp="1594639851145">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
-    <state x="509" y="345" key="com.intellij.ide.util.TipDialog/64.0.1472.1024@64.0.1472.1024" timestamp="1594410997069" />
-    <state x="506" y="273" width="882" height="552" key="find.popup" timestamp="1594485528734">
+    <state x="509" y="345" key="com.intellij.ide.util.TipDialog/64.0.1472.1024@64.0.1472.1024" timestamp="1594639851145" />
+    <state x="506" y="273" width="882" height="552" key="find.popup" timestamp="1594626155930">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
-    <state x="506" y="273" width="882" height="552" key="find.popup/64.0.1472.1024@64.0.1472.1024" timestamp="1594485528734" />
-    <state x="463" y="254" width="672" height="678" key="search.everywhere.popup" timestamp="1594229051566">
+    <state x="506" y="273" width="882" height="552" key="find.popup/64.0.1472.1024@64.0.1472.1024" timestamp="1594626155930" />
+    <state x="463" y="254" width="672" height="678" key="search.everywhere.popup" timestamp="1594576653344">
       <screen x="64" y="0" width="1472" height="1024" />
     </state>
-    <state x="463" y="254" width="672" height="678" key="search.everywhere.popup/64.0.1472.1024@64.0.1472.1024" timestamp="1594229051566" />
+    <state x="463" y="254" width="672" height="678" key="search.everywhere.popup/64.0.1472.1024@64.0.1472.1024" timestamp="1594576653344" />
   </component>
 </project>

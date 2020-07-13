@@ -1,10 +1,5 @@
 {%  extends 'base.html.twig' %}
-  {% block head %}
-      <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-      <link rel="stylesheet" type="text/css" href="ewa.css"/>
-  {% endblock %}
+
 {% block headerintro %}
 
 <section class="nieuwsOverzicht">
@@ -27,7 +22,8 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
                    <div class="container">
                         <div class="card">
-                        <img class="card-img-top" src="images/news/{{ nieuwsbericht.img }}" alt="Card image cap" />
+                            <div class="cardimg">
+                        <img class="card-img-top" src="images/news/{{ nieuwsbericht.image }}" alt="Card image cap" /></div>
                             <div class="card-body">
                                 <h5>{{ nieuwsbericht.title }}</h5>
                         <p >{{nieuwsbericht.content}}</p>
@@ -43,7 +39,7 @@
     </section>
 
 </div>
-</section>
+
 {% endblock %}
 
 

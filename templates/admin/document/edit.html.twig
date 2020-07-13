@@ -1,13 +1,23 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}Edit Document{% endblock %}
+{% block title %}Aanpassen van informatie{% endblock %}
 
 {% block body %}
-    <h1>Edit Document</h1>
+<section class="nieuwsOverzicht">
+<div class="container text-center" >
+    <div class="title">
+        <div class="row justify-center-md-center">
+            <div class="col-md-12 col-lg-12 col-sm-6 ">
+                <h2></h2></div></div></div></div>
+                </section>
+<div class="container " >
+    {{ include('admin/document/_form.html.twig', {'button_label': 'Opslaan'}) }}
 
-    {{ include('admin/document/_form.html.twig', {'button_label': 'Update'}) }}
+    <div class="nieuwsberichten">
+        <a href="{{ path('beheerInformatie') }}">
+            <button style="margin-left:0px">Naar Overzicht</button></a>
+    </div>
 
-    <a href="{{ path('document_index') }}">back to list</a>
 
-    {{ include('admin/document/_delete_form.html.twig') }}
+</div>
 {% endblock %}

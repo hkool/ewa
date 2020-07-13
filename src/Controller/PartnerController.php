@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 /**
- * @Route("/partner")
+ * @Route("admin/partner")
  */
 class PartnerController extends AbstractController
 {
@@ -23,7 +23,7 @@ class PartnerController extends AbstractController
             ->getRepository(Partner::class)
             ->findAll();
 
-        return $this->render('partner/index.html.twig', [
+        return $this->render('admin/partner/index.html.twig', [
             'partners' => $partners,
         ]);
     }
@@ -45,7 +45,7 @@ class PartnerController extends AbstractController
             return $this->redirectToRoute('partner_index');
         }
 
-        return $this->render('partner/new.html.twig', [
+        return $this->render('admin/partner/new.html.twig', [
             'partner' => $partner,
             'form' => $form->createView(),
         ]);
@@ -56,7 +56,7 @@ class PartnerController extends AbstractController
      */
     public function show(Partner $partner): Response
     {
-        return $this->render('partner/show.html.twig', [
+        return $this->render('admin/partner/show.html.twig', [
             'partner' => $partner,
         ]);
     }
@@ -70,12 +70,14 @@ class PartnerController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+
+            $this->getDoctrine()->getManager()->persist($partner);
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('partner_index');
         }
 
-        return $this->render('partner/edit.html.twig', [
+        return $this->render('admin/partner/edit.html.twig', [
             'partner' => $partner,
             'form' => $form->createView(),
         ]);

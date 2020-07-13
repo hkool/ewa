@@ -6,6 +6,7 @@ namespace App\Controller;
 
 use App\Entity\Post;
 use App\Form\DocumentType;
+use App\Repository\ContactRepository;
 use App\Repository\DocumentRepository;
 use App\Repository\PartnerRepository;
 use App\Repository\PostRepository;
@@ -37,18 +38,34 @@ class AdminController extends AbstractController
      */
     public function beheerNieuwsAction(PostRepository $postRepository): Response
     {
+        $news = $postRepository->findBy([], ['id' => 'DESC']);
+        foreach($news as $nw)
+        {
+            $nw->setContent(substr($nw->getContent(),0,200));
+            $nw->setContent($nw->getContent() . "...");
+        }
         return $this->render('admin/post/index.html.twig', [
-            'posts' => $postRepository->findAll(),
+            'posts' => $news,
         ]);
     }
     //    beheer partners
     /**
-     * @Route("/beheerNieuws", name="beheerPartners", methods={"GET"})
+     * @Route("/beheerPartners", name="beheerPartners", methods={"GET"})
      */
     public function beheerPartnersAction(PartnerRepository $partnerRepository): Response
     {
         return $this->render('admin/partner/index.html.twig', [
             'partners' => $partnerRepository->findAll(),
+        ]);
+    }
+    //    beheer contacten
+    /**
+     * @Route("/beheerContacten", name="beheerContacten", methods={"GET"})
+     */
+    public function beheerContactenAction(ContactRepository $contactRepository): Response
+    {
+        return $this->render('admin/contact/index.html.twig', [
+            'contacten' => $contactRepository->findAll(),
         ]);
     }
     //    beheer informatie

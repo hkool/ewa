@@ -1,10 +1,15 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}Post{% endblock %}
+{% block title %}Nieuwsbericht{% endblock %}
 
 {% block body %}
-    <h1>Post</h1>
-
+<section class="nieuwsOverzicht">
+<div class="container text-center" >
+    <div class="title">
+        <div class="row justify-center-md-center">
+            <div class="col-md-12 col-lg-12 col-sm-6 ">
+                <h1></h1></div></div></div></div></section>
+<div class="container " >
     <table class="table">
         <tbody>
             <tr>
@@ -25,7 +30,7 @@
             </tr>
             <tr>
                 <th>Img</th>
-                <td>{{ post.image }}</td>
+                <td><div class="beheer">{{ post.image }}</div></td>
             </tr>
             <tr>
                 <th>Created</th>
@@ -38,9 +43,12 @@
         </tbody>
     </table>
 
-    <a href="{{ path('post_index') }}">back to list</a>
-
-    <a href="{{ path('post_edit', {'id': post.id}) }}">edit</a>
-
+    <div class="nieuwsberichten">
+         <a href="{{ path('post_edit', {'id': post.id}) }}"><button style="margin-left:0px">Wijzigen</button></a>
+        <a href="{{ path('beheerNieuws') }}">
+            <button style="margin-left:0px">Naar Overzicht</button></a>
+    </div>
     {{ include('admin/post/_delete_form.html.twig') }}
+
+</div>
 {% endblock %}

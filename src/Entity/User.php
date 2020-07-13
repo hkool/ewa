@@ -80,7 +80,6 @@ class User implements UserInterface
      */
     public function onPrePersist(): void
     {
-        $this->id = Uuid::uuid4();
         $this->created = new DateTime('NOW');
     }
 
@@ -92,7 +91,7 @@ class User implements UserInterface
         $this->updated = new DateTime('NOW');
     }
 
-    public function getId(): UuidInterface
+    public function getId(): int
     {
         return $this->id;
     }

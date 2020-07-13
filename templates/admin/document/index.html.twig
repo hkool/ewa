@@ -1,34 +1,62 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}Document index{% endblock %}
+{% block title %}Informatie overzicht{% endblock %}
 
 {% block body %}
-    <h1>Document index</h1>
+    <section class="nieuwsOverzicht">
+        <div class="container text-center" >
+            <div class="title">
+                <div class="row justify-center-md-center">
+                    <div class="col-md-12 col-lg-12 col-sm-6 ">
+                        <h2>BEHEER</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nieuwsberichten">
+        <div class="container" >
+            <div class="row justify-center-md-center">
 
-    <table class="table">
+                <a href="{{ path('beheerNieuws') }}"><button>Nieuws</button></a>
+                <a href="{{ path('beheerPartners') }}"><button>Partners</button></a>
+                <a href="{{ path('beheerInformatie') }}"><button>Informatie</button></a>
+                <a href="{{ path('beheerContacten') }}"><button>Contacten</button></a>
+            </div>
+            <div class="title beheerPortal">
+                <div class="container text-center" >
+                    <div class="row justify-center-md-center">
+                        <div class="col-md-12 col-lg-12 col-sm-6 ">
+                            <h2>Informatie</h2></div></div></div>
+                </div>
+
+            <a href="{{ path('document_new') }}"><button class="beheer">Toevoegen</button></a>
+        </div>
+    </section>
+    <div class="container  " >
+        <table class="table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Description</th>
-                <th>File</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>actions</th>
+                <th>Naam</th>
+                <th>Omschrijving</th>
+                <th>Document</th>
+                <th>Aangemaakt</th>
+                <th>Gewijzigd</th>
+                <th> </th>
             </tr>
         </thead>
         <tbody>
         {% for document in documents %}
             <tr>
-                <td>{{ document.id }}</td>
-                <td>{{ document.name }}</td>
+                <td><a href="{{ path('document_show', {'id': document.id}) }}">{{ document.name }}</a></td>
                 <td>{{ document.description }}</td>
                 <td>{{ document.file }}</td>
                 <td>{{ document.created ? document.created|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ document.updated ? document.updated|date('Y-m-d H:i:s') : '' }}</td>
                 <td>
-                    <a href="{{ path('document_show', {'id': document.id}) }}">show</a>
-                    <a href="{{ path('document_edit', {'id': document.id}) }}">edit</a>
+
+                    <a href="{{ path('document_edit', {'id': document.id}) }}"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;edit</i></a><br />
+                    <a href="{{ path('document_delete', {'id': document.id}) }}" onclick="return confirm('Weet u zeker dat u dit item wilt verwijderen?');"><i class="fa fa-trash " aria-hidden="true">&nbsp;delete</i></a>
                 </td>
             </tr>
         {% else %}
@@ -38,6 +66,7 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 
-    <a href="{{ path('document_new') }}">Create new</a>
+
 {% endblock %}

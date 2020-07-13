@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <title>EWA Haaglanden</title>
     {% block head %}
-{#        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>#}
-{#        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">#}
-{#        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>#}
-{#        <link rel="stylesheet" type="text/css" href="ewa.css"/>#}
+
+        <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="css/ewa.css"/>
     {% endblock %}
 </head>
 <body>
@@ -19,7 +20,7 @@
     <!--navigatiebalk toggle effect bootstrap-->
     <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <a class="navbar-brand" href="#"> <img src="/images/EWAHaaglanden_logo.png" alt="EWA haaglanden"></a>
+            <a class="navbar-brand" href="#"> <img src="images/EWAHaaglanden_logo.png" alt="EWA haaglanden"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -38,13 +39,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('showInformatie') }}">Informatie</a>
                     </li>
-                    <li class="nav-item">
-                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                        <a class="nav-link " href="{{ path('showBeheer') }}" tabindex="-1" >Beheer</a>
+
+
+                            <li class="nav-item"> <a class="nav-link " href="{{ path('showBeheer') }}" tabindex="-1" >Beheer</a></li>
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="nav-item"> <a class="nav-link " href="{{ path('app_logout') }}" tabindex="-1" >Uitloggen</a></li>
                         {% else %}
-                        <a class="nav-link " href="{{ path('app_login') }}" tabindex="-1" >Inloggen</a>
+                    <li class="nav-item"><a class="nav-link " href="{{ path('app_login') }}" tabindex="-1" >Inloggen</a></li>
                         {% endif %}
-                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -73,11 +76,11 @@
     <footer class="footer">
     <div class="footer-copyright text-center py-3" style>
         <div class="container" style="text-align: center;">
-            &copy; 2020. Ontworpen en gemaakt op basis van student van
+            &copy; 2020. Gemaakt op basis van ontwerp en prototype van Michael Schaap, student van het
             <a href="https://www.rocmondriaan.nl"
                     target="_blank"
                     rel="noopener"
-            >ROC Mondriaan Michael Schaap</a>.
+            >ROC Mondriaan </a>.
         </div>
     </div>
     </footer>
@@ -86,8 +89,8 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 {% endblock %}
 
 </body>

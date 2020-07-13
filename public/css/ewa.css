@@ -1,0 +1,408 @@
+*
+{
+ margin:0;
+ padding:0;
+font-family:Lato,Helvetica Neue,Arial,sans-serif;
+}
+
+body {
+   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+section{
+padding-bottom:30px;
+}
+.navbar {
+    padding-top: .625rem;
+    padding-bottom: .625rem;
+    min-height: 53px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .15);
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+}
+.navbar img{
+    width:200px;
+    margin:0 150px 0 150px;
+}
+.navbarExtra{
+   
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.fixed-bottom, .fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+}
+.container{
+    flex-wrap: nowrap;
+}
+
+.navbar-expand-lg .navbar-collapse {
+    display: -ms-flexbox !important;
+    -ms-flex-preferred-size: auto;
+    flex-basis: auto;
+}
+.page-header {
+    min-height: 50vh;
+    max-height: 999px;
+    padding: 0;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.page-header >img{
+    width: 90%; position: absolute; left: 5%; bottom: 25%;
+}
+
+.video{
+    background-color: #FFB300;
+}
+.video h2 {
+    color: black;
+    font-size: 58px;
+    font-weight: 700;
+    padding-bottom:30px;
+}
+.title{
+    padding-top: 30px;
+}
+
+.intro{
+    color:black;
+    margin-bottom:30px;
+}
+.intro h2{
+    color:black;
+    font-size:40px;
+    font-weight:700;
+}
+.intro >div>div>div>p{
+     margin:0 20% 0 20%;
+     width:60%
+ }
+.contact{
+    background-color:RGB(246,246,246);
+}
+.contact h2, .nieuwsOverzicht h2{
+     color:black;
+     font-weight:700;
+     font-size:30px;
+ }
+.nieuws h2{
+    margin-bottom:30px;
+}
+.nieuws .card-deck, .nieuws .card
+{
+    height: 220px;
+    overflow: hidden;
+}
+
+.nieuwsOverzicht h2{
+    font-size:50px;
+}
+.nieuwsberichten h5{
+    color:black;
+    padding:10px 0;
+    font-size: 1em;
+    font-weight: 700;
+}
+.nieuwsberichten .card{
+    border: 0;
+    color:darkgrey;
+    border-radius: 0.1875rem;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    height:500px;
+    overflow: hidden;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+.nieuwsberichten button{
+    margin: 0 auto 10px 100px;
+}
+.nieuwsberichten a{
+    background-color:white;
+    padding: 10px 0;
+}
+section.nieuwsOverzicht{
+    background-color: rgb(255, 179, 0);
+    padding-top: 8%;
+    margin-bottom: 5%
+}
+.nieuws container{
+    margin-bottom: 30px;
+}
+.cardimg{
+    height:210px;
+    overflow: -moz-hidden-unscrollable;
+}
+.cardimg img{
+    height:200px;
+    width:inherit;
+}
+.contact label, .login label{
+    padding-top: calc(.375rem + 1px);
+    padding-bottom: calc(.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+}
+#navbarTogglerDemo02 ul{
+    margin-left:40%;
+}
+.big_form{
+    box-shadow: none;
+    background-color:white;
+    display: flex;
+    -moz-box-align: center;
+    align-items: center;
+    width: 100%;
+    max-width: 668px;
+    position: relative;
+    height: 48px;
+    border: none;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-bottom: 2px solid #666;
+    border-image: none 100%/1/0 stretch;
+    border-radius: 0;
+    font-family: Exo BNNVARA,Verdana,sans-serif;
+    color: #101010;
+    font-size: 16px;
+    text-indent: 17px;
+    padding: 3px;
+}
+
+.contact button, .nieuwsberichten button, .partners button, .login button ,button.btn{
+    align-self: center;
+    background: transparent;
+    padding: .5rem 1rem;
+    margin-bottom:1.2em;
+    transition: all .5s ease;
+    color: #41403e;
+    letter-spacing: 1px;
+    outline: none;
+    cursor: pointer;
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+    border-color: #41403e;
+}
+
+button.linedthin{
+    border: 2px solid #41403e;
+}
+.form-control{
+    height:inherit;
+}
+.vich-image img{
+    max-height:200px;
+    max-width:200px;
+}
+
+.partners .card h5{
+    text-align: center;
+    font-weight: 700;
+    margin-top:10px;
+}
+
+.contact label{
+    padding-top: calc(.375rem + 1px);
+    padding-bottom: calc(.375rem + 1px);
+    margin-bottom: 0;
+    font-size: inherit;
+    line-height: 1.5;
+}
+.contact input, .contact label, .login label, .login input{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    text-align: left
+}
+.form_check{
+    position: relative;
+    display: block;
+    padding-left: 1.25rem;
+}
+
+button:hover{
+    box-shadow: 0 9px 12px 0 rgba(0,0,0,0.24), 0 9px 12px 0 rgba(0,0,0,0.19);
+}
+
+.nieuws{
+    background-color: rgb(204, 0, 41);
+    color:white;
+}
+.nieuws h2{
+    font-size:50px;
+    font-weight: 700;
+    padding-top:30px;
+}
+.partner{
+    background-color: RGB(246,246,246);
+}
+.partner h2{
+    color:black;
+    font-weight:700;
+    font-size:50px;
+    padding-bottom: 30px;
+ }
+
+.partners .card{
+    border: 0;
+    border-radius: 0.1875rem;
+    position: relative;
+    width: 100%;
+    margin-bottom: 30px;
+    overflow: hidden;
+    box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
+}
+
+.partners .card-body{
+    text-align: center;
+}
+.partners .card-img{
+    width: auto;
+    height: 50px;
+    background-size: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+/*/foto banner*/
+.fotocontainer {
+    width: 100%;
+    overflow: hidden;
+    margin: 10px auto;
+    background: white;
+}
+
+.photobanner, .photobanner2 {
+    height: 55px;
+    width: 2000px;
+    margin-bottom: 5px;
+    font-size: 0;
+}
+
+.photobanner img, .photobanner2 img {
+    margin-bottom: 10px;
+    margin-right: 5px;
+    width: 150px;
+    height:50px;
+}
+
+.photobanner img  {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.photobanner img:hover {
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+    cursor: pointer;
+
+    -webkit-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+    box-shadow: 0px 3px 5px rgba(0,0,0,0.2);
+}
+
+
+/*keyframe animations*/
+.first {
+    -webkit-animation: bannermove 30s linear infinite;
+    -moz-animation: bannermove 30s linear infinite;
+    -ms-animation: bannermove 30s linear infinite;
+    -o-animation: bannermove 30s linear infinite;
+    animation: bannermove 30s linear infinite;
+}
+
+@keyframes bannermove{
+    0% {margin-left: 0px;}
+    100% {margin-left: -1500px;}
+}
+
+@-moz-keyframes bannermove {
+    0% {margin-left: 0px;}
+    100% {margin-left: -1500px;}
+}
+
+@-webkit-keyframes bannermove {
+    0% {margin-left: 0px;}
+    100% {margin-left: -1500px;}
+}
+
+@-ms-keyframes bannermove {
+    0% {margin-left: 0px;}
+    100% {margin-left: -1500px;}
+}
+
+@-o-keyframes bannermove {
+    0% {margin-left: 0px;}
+    100% {margin-left: -1500px;}
+}
+
+
+/*footer*/
+footer{
+    background-color:black;
+    color:white;
+    fonit-size:14px;
+    font-weight:400;
+}
+footer a, footer a:hover{
+    color:white;
+    text-deconration:none;
+}
+/*
+cards voor nieuws in index
+*/
+.card-img-overlay
+{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    opacity: 0.6;
+}
+
+.card-title
+{
+     position: absolute;
+     top: 45%;
+     left: 0;
+     width: 100%;
+ }
+.card-text a, .card-text a:hover{
+    position: absolute;
+    top: 75%;
+    color:white;
+}
+
+.beheer img{
+    max-width: 400px;
+
+}
+.beheer{
+    max-width: 400px;
+    overflow: hidden;
+}
+div.beheerPortal{
+    border-top-color: #868686;
+    border-top-style:solid;
+    border-top-width: medium;
+
+    }

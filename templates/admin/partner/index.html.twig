@@ -1,43 +1,68 @@
-{% extends 'base.html.twig' %}
+{% extends 'subsubbase.html.twig' %}
 
-{% block title %}Partner index{% endblock %}
+{% block title %}Overzicht van partners{% endblock %}
 
 {% block body %}
-    <h1>Partner index</h1>
+    <section class="nieuwsOverzicht">
+        <div class="container text-center" >
+            <div class="title">
+                <div class="row justify-center-md-center">
+                    <div class="col-md-12 col-lg-12 col-sm-6 ">
+                        <h2>BEHEER</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="nieuwsberichten">
+        <div class="container" >
+            <div class="row justify-center-md-center">
 
-    <table class="table">
+                <a href="{{ path('beheerNieuws') }}"><button>Nieuws</button></a>
+                <a href="{{ path('beheerPartners') }}"><button>Partners</button></a>
+                <a href="{{ path('beheerInformatie') }}"><button>Informatie</button></a>
+                <a href="{{ path('beheerContacten') }}"><button>Contacten</button></a>
+            </div>
+            <div class="title beheerPortal">
+                <div class="container text-center" >
+                    <div class="row justify-center-md-center">
+                        <div class="col-md-12 col-lg-12 col-sm-6 ">
+                            <h2>Partners</h2></div></div></div>
+            </div>
+
+            <a href="{{ path('partner_new') }}"><button class="beheer">Toevoegen</button></a>
+        </div>
+    </section>
+    <div class="container " >
+    <table class="table table-striped">
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Name</th>
+                <th>Naam</th>
                 <th>Website</th>
-                <th>Img</th>
-                <th>Created</th>
-                <th>Updated</th>
-                <th>actions</th>
+                <th>Logo</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>
         {% for partner in partners %}
             <tr>
-                <td>{{ partner.id }}</td>
-                <td>{{ partner.name }}</td>
+                <td><a href="{{ path('partner_show', {'id': partner.id}) }}">{{ partner.name }}</a></td>
                 <td>{{ partner.website }}</td>
-                <td>{{ partner.img }}</td>
-                <td>{{ partner.created ? partner.created|date('Y-m-d H:i:s') : '' }}</td>
-                <td>{{ partner.updated ? partner.updated|date('Y-m-d H:i:s') : '' }}</td>
+                <td><div class="beheer"><img src="/public/{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" /></div></td>
                 <td>
-                    <a href="{{ path('partner_show', {'id': partner.id}) }}">show</a>
-                    <a href="{{ path('partner_edit', {'id': partner.id}) }}">edit</a>
+                    <a href="{{ path('partner_edit', {'id': partner.id}) }}"><i class="fa fa-pencil fa-fw" aria-hidden="true">&nbsp;edit</i></a><br />
+                   <a href="{{ path('partner_delete', {'id': partner.id}) }}" onclick="return confirm('Weet u zeker dat u dit item wilt verwijderen?');"><i class="fa fa-trash " aria-hidden="true">&nbsp;delete</i></a>
+
+
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="7">no records found</td>
+                <td colspan="7">Geen partners gevonden!</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
+</div>
 
-    <a href="{{ path('partner_new') }}">Create new</a>
 {% endblock %}

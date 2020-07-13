@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>EWA Haaglanden</title>
+    {% block head %}
+        <link rel="stylesheet" type="text/css" href="/public/slick/slick.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="/public/slick/slick-theme.css"/>
+        <link rel="stylesheet" type="text/css" href="/public/css/ewa.css"/>
+        <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css"
+              rel="stylesheet"  type='text/css'>
+        <link href="/public/css/font-awesome/css/font-awesome.min.css" rel="stylesheet"> <!--load all styles -->
+    {% endblock %}
+</head>
+<body>
+
+{% block wrapper %}
+
+    {% block nav  %}
+        <!--navigatiebalk toggle effect bootstrap-->
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <a class="navbar-brand" href="#"> <img src="/public/images/EWAHaaglanden_logo.png" alt="EWA haaglanden"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{ path('homeCreate') }}">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('showNieuws') }}">Nieuws</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('showPartners') }}">Partners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ path('showInformatie') }}">Informatie</a>
+                        </li>
+
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            <li class="nav-item"> <a class="nav-link " href="{{ path('showBeheer') }}" tabindex="-1" >Beheer</a></li>
+                            <li class="nav-item"> <a class="nav-link " href="{{ path('app_logout') }}" tabindex="-1" >Uitloggen</a></li>
+                        {% else %}
+                            <li class="nav-item"><a class="nav-link " href="{{ path('app_login') }}" tabindex="-1" >Inloggen</a></li>
+                        {% endif %}
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!--    einde navigatiebalk-->
+    {%  endblock  %}
+{#aan index gerelateerde groep#}
+    {% block headerintro  %}
+    {% endblock %}
+    {% block video  %}
+    {% endblock %}
+    {% block nieuws  %}
+    {% endblock %}
+    {% block contact  %}
+    {% endblock %}
+    {% block partners  %}
+    {% endblock %}
+    {% block body %}
+        {% endblock %}
+{#einde aan index gerelateerde onderdelen#}
+    <noscript>
+        <strong>We're sorry but Ewa Haaglanden doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+{% endblock %}
+{% block footer  %}
+    <footer class="footer">
+    <div class="footer-copyright text-center py-3" style>
+        <div class="container" style="text-align: center;">
+            &copy; 2020. Ontworpen en gemaakt op basis van student van
+            <a href="https://www.rocmondriaan.nl"
+                    target="_blank"
+                    rel="noopener"
+            >ROC Mondriaan Michael Schaap</a>.
+        </div>
+    </div>
+    </footer>
+{% endblock %}
+{% block script  %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+{% endblock %}
+
+</body>
+</html>
+
+
