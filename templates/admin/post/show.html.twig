@@ -22,7 +22,13 @@
             </tr>
             <tr>
                 <th>Content</th>
-                <td>{{ post.content }}</td>
+                <td>
+{#                    #before#}
+{#                    {{ post.content }}#}
+{#                    #after#}
+{#                    {{ post.content |raw }}#}
+                    {{ (post.content) |raw }}
+                </td>
             </tr>
             <tr>
                 <th>Reaction</th>

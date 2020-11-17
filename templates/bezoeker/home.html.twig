@@ -8,13 +8,9 @@
     <div class="container text-center" >
         <div class="row justify-center-md-center">
             <div class="col-md-12 col-lg-12 col-sm-6 ">
-                <h2>Introductie Ewa Haaglanden</h2>
-                <p>Ewa Haaglanden is een samenwerkingsverband tussen bedrijven, gemeente,
-                    ROC Mondriaan en andere partijen in de regio Haaglanden. Binnen Ewa H
-                    aaglanden willen we samen jonge mensen zonder diploma begeleiden,
-                    opleiden en doorschakelen naar een diploma én een fijne werkplek.
-                    We willen kandidaten binnen bedrijven verder opleiden. En we willen
-                    kandidaten met relevante scholing dichter bij een baan en participatie brengen.</p>
+                               <p>Ewa Haaglanden is een samenwerkingsverband tussen bedrijven, gemeenten, ROC Mondriaan en maatschappelijke partijen in de regio Haaglanden.
+                                   Wij leiden jonge mensen op naar een diploma en een fijne werkplek. Wij leiden werknemers verder op.
+                                   En we brengen kandidaten met relevante scholing dichter bij een baan en participatie.</p>
             </div>
         </div>
     </div>
@@ -142,17 +138,18 @@
     <div class="container">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
             <div class="contactIntro text-center">
-                <h2 class="title" >ONZE PARTNERS</h2></div></div></div></section>
+                <h2 class="title" >Onze Partners</h2></div></div></div></section>
     <div class="fotocontainer">
         <div class="photobanner">
             {%  set first=true %}
             {% for partner in partners %}
 
                 {% if first == true  %}
-                    <img class="first" src="{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />>
+                    <img src="images/news/blanco.png" /> <img src="images/news/blanco.png" />
+                    <img class="first" src="{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />
                     {% set first= false %}
                 {%  else %}
-                    <img src="{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />>
+                    <img src="../{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />
                 {%  endif %}
 
             {% endfor %}

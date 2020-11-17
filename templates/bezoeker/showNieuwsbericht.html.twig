@@ -25,7 +25,7 @@
                                 <div class="card-body">
                                     <h5>{{ nieuwsbericht.title }}</h5>
                                     <p>{{ nieuwsbericht.created|date('d-m-`y') }}</p>
-                                    <p >{{nieuwsbericht.content}}</p>
+                                    <p >{{nieuwsbericht.content|raw}}</p>
                                 </div>
 
                             </div>

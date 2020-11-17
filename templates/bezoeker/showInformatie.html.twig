@@ -23,10 +23,10 @@
                         <div class="card">
                             <div class="card-body">
                                 <h5>{{ informatie.name }}</h5>
-                                    <p >{{informatie.description}}</p>
+                                    <p >{{informatie.description |raw}}</p>
                             </div>
                             {% if informatie.file != NULL %}
-                            <a href="images/doc/{{ informatie.file }}"><button >Download</button></a>
+                            <a href="../images/doc/{{ informatie.file }}"><button >Download</button></a>
                             {% endif %}
                         </div>
                     </div>

@@ -16,7 +16,7 @@ class DocumentType extends AbstractType
     {
         $builder
             ->add('name')
-            ->add('description',TextareaType::class)
+            ->add('description', TextareaType::class, array('attr' => array('class' => 'ckeditor')))
             ->add('file', FileType::class, [
                 'label' => 'Document (PDF file)',
 

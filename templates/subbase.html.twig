@@ -41,13 +41,12 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ path('showInformatie') }}">Informatie</a>
                     </li>
-
-
-                         <li class="nav-item"> <a class="nav-link " href="{{ path('showBeheer') }}" tabindex="-1" >Beheer</a></li>
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}        <li class="nav-item"> <a class="nav-link " href="{{ path('app_logout') }}" tabindex="-1" >Uitloggen</a></li>
-                        {% else %}
-                    <li class="nav-item"><a class="nav-link " href="{{ path('app_login') }}" tabindex="-1" >Inloggen</a></li>
-                        {% endif %}
+                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        <li class="nav-item"> <a class="nav-link " href="{{ path('showBeheer') }}" tabindex="-1" >Beheer</a></li>
+                        <li class="nav-item"> <a class="nav-link " href="{{ path('app_logout') }}" tabindex="-1" >Uitloggen</a></li>
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link " href="{{ path('app_login') }}" tabindex="-1" >Inloggen</a></li>
+                    {% endif %}
 
                 </ul>
             </div>
@@ -81,7 +80,7 @@
             <a href="https://www.rocmondriaan.nl"
                     target="_blank"
                     rel="noopener"
-            >ROC Mondriaan Michael Schaap</a>.
+            >ROC Mondriaan Michael Schaap</a>
         </div>
     </div>
     </footer>

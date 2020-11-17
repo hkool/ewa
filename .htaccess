@@ -1,0 +1,6 @@
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} /public/([^\s?]*) [NC]
+RewriteRule ^ /project/%1 [L,NE,R=301]
+
+RewriteRule ^(.*)$ public/$1 [L,NC]

@@ -7,7 +7,7 @@
         <div class="title">
             <div class="row justify-center-md-center">
                 <div class="col-md-12 col-lg-12 col-sm-6 ">
-                    <h2>NIEUWS</h2>
+                    <h2>Nieuws</h2>
                 </div>
             </div>
         </div>
@@ -23,10 +23,10 @@
                    <div class="container">
                         <div class="card">
                             <div class="cardimg">
-                        <img class="card-img-top" src="images/news/{{ nieuwsbericht.image }}" alt="Card image cap" /></div>
+                        <img class="card-img-top" src="../images/news/{{ nieuwsbericht.image }}" alt="Card image cap" /></div>
                             <div class="card-body">
                                 <h5>{{ nieuwsbericht.title }}</h5>
-                        <p >{{nieuwsbericht.content}}</p>
+                        <p >{{nieuwsbericht.content|raw}}</p>
                             </div>
                             <a href="{{ path('showNieuwsdetail', {id:nieuwsbericht.id}) }}"><button >Lees meer</button></a>
                         </div>

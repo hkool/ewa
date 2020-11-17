@@ -1,4 +1,10 @@
 {
+    "brick/math": {
+        "version": "0.8.14"
+    },
+    "composer/package-versions-deprecated": {
+        "version": "1.10.99"
+    },
     "dealerdirect/phpcodesniffer-composer-installer": {
         "version": "v0.5.0"
     },
@@ -99,6 +105,9 @@
     "doctrine/sql-formatter": {
         "version": "1.1.0"
     },
+    "easycorp/easy-log-handler": {
+        "version": "v1.0.9"
+    },
     "egulias/email-validator": {
         "version": "2.1.17"
     },
@@ -113,6 +122,9 @@
         "files": [
             "./config/packages/fos_rest.yaml"
         ]
+    },
+    "jdorn/sql-formatter": {
+        "version": "v1.2.17"
     },
     "jms/metadata": {
         "version": "2.1.0"
@@ -167,6 +179,24 @@
     },
     "psr/log": {
         "version": "1.1.2"
+    },
+    "ramsey/collection": {
+        "version": "1.0.1"
+    },
+    "ramsey/uuid": {
+        "version": "4.0.1"
+    },
+    "ramsey/uuid-doctrine": {
+        "version": "1.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.3",
+            "ref": "471aed0fbf5620b8d7f92b7a5ebbbf6c0945c27a"
+        },
+        "files": [
+            "./config/packages/ramsey_uuid_doctrine.yaml"
+        ]
     },
     "sensio/framework-extra-bundle": {
         "version": "5.2",
@@ -590,6 +620,25 @@
             "version": "3.3",
             "ref": "dae9b39fd6717970be7601101ce5aa960bf53d9a"
         }
+    },
+    "symfony/webpack-encore-bundle": {
+        "version": "1.6",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "1.6",
+            "ref": "69e1d805ad95964088bd510c05995e87dc391564"
+        },
+        "files": [
+            "./assets/css/app.css",
+            "./assets/js/app.js",
+            "./config/packages/assets.yaml",
+            "./config/packages/prod/webpack_encore.yaml",
+            "./config/packages/test/webpack_encore.yaml",
+            "./config/packages/webpack_encore.yaml",
+            "./package.json",
+            "./webpack.config.js"
+        ]
     },
     "symfony/yaml": {
         "version": "v4.4.5"

@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 
+use App\Entity\Contact;
 use App\Entity\Post;
 use App\Form\DocumentType;
 use App\Repository\ContactRepository;
@@ -77,6 +78,22 @@ class AdminController extends AbstractController
         return $this->render('admin/document/index.html.twig', [
             'documents' => $informatieRepository->findAll(),
         ]);
+    }
+
+//    het verwijderen van contacten ivm AVG
+
+    /**
+     * @Route("/{id}/delete", name="contact_delete", methods={"DELETE"})
+     */
+    public function delete(Request $request, Contact $contact): Response
+    {
+        if ($this->isCsrfTokenValid('delete'.$contact->getId(), $request->request->get('_token'))) {
+            $entityManager = $this->getDoctrine()->getManager();
+            $entityManager->remove($contact);
+            $entityManager->flush();
+        }
+
+        return $this->redirectToRoute('beheerContacten');
     }
 
 

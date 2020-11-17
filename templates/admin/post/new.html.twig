@@ -16,3 +16,15 @@
     <a href="{{ path('beheerNieuws') }}"><button style="margin-left:0px">Naar Overzicht</button></a></div>
 </div>
 {% endblock %}
+{% block script %}
+    {{ parent() }}
+{# Javascript Block for text editor#}
+
+    <script src="../../javascript/ckeditor/adapters/jquery.js" type="text/javascript"></script>
+    <script src="../../javascript/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(function() {
+        $('textarea.ckeditor').ckeditor();
+    });
+</script>
+{% endblock %}

@@ -19,7 +19,7 @@ class PostType extends AbstractType
     {
         $builder
             ->add('title')
-            ->add('content', TextareaType::class)
+            ->add('content', TextareaType::class,array('attr' => array('class' => 'ckeditor')))
             ->add('reaction')
             ->add('imageFile', VichImageType::class, array(
                 'required'      => false))

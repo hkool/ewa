@@ -21,3 +21,15 @@
 
 </div>
 {% endblock %}
+{% block script %}
+    {{ parent() }}
+    {# Javascript Block for text editor#}
+
+    <script src="/public/javascript/ckeditor/adapters/jquery.js" type="text/javascript"></script>
+    <script src="/public/javascript/ckeditor/ckeditor.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('textarea.ckeditor').ckeditor();
+        });
+    </script>
+{% endblock %}

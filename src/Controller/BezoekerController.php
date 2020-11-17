@@ -15,6 +15,8 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\SerializerInterface;
 use Symfony\Component\Routing\Annotation\Route;
@@ -31,7 +33,7 @@ class BezoekerController extends AbstractController
     /**
      * @Route("/", name="homeCreate")
      */
-    function indexAction(Request $request, \Swift_Mailer $mailer)
+    function indexAction(Request $request, MailerInterface $mailer)
     {
         $nieuwsberichten = $this->em->getRepository(Post::class)->findLatest();
         $partners=$this->em->getRepository(Partner::class)->findAll();
@@ -63,22 +65,21 @@ class BezoekerController extends AbstractController
             $contact->setMessage($message);
             $contact->setSubscribed($subscribed);
 // make email
-            $message = (new \Swift_Message('Hello Email'))
-                ->setFrom($email)
-                ->setTo('ewa@jkoolhf422.422.axc.nl')
-                ->setBody(
-                    $this->renderView(
-                    // templates/emails/registration.html.twig
-                        'emails/registration.html.twig',
-                        ['name' => $name]
-                    ),
-                    'text/html'
-                )
-            ;
+            $html = "<p>Beste mevrouw A. Waarts, </p>
+                     <p>U heeft een bericht ontvangen via de website van EWA Haaglanden van $email.  </p>
+                     <p>$message</p>";
 
-            $mailer->send($message);
+            $email = (new Email())
+                ->from($email)
+                ->to('j.kool@rocmondriaan.nl')
+                ->subject('E-mail van EWA Haaglanden met bericht')
+                ->html($html);
+
+            $mailer->send($email);
+            $this->addFlash('success',"Hartelijk dank, uw bericht is verzonden.");
             $this->getDoctrine()->getManager()->persist($contact);
             $this->getDoctrine()->getManager()->flush();
+            return $this->redirectToRoute('homeCreate');
         }
         return $this->render('bezoeker/home.html.twig', [
             'form' => $form->createView(),

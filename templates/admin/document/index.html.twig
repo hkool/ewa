@@ -8,7 +8,7 @@
             <div class="title">
                 <div class="row justify-center-md-center">
                     <div class="col-md-12 col-lg-12 col-sm-6 ">
-                        <h2>BEHEER</h2>
+                        <h2>Beheer</h2>
                     </div>
                 </div>
             </div>
@@ -49,7 +49,7 @@
         {% for document in documents %}
             <tr>
                 <td><a href="{{ path('document_show', {'id': document.id}) }}">{{ document.name }}</a></td>
-                <td>{{ document.description }}</td>
+                <td>{{ document.description|raw }}</td>
                 <td>{{ document.file }}</td>
                 <td>{{ document.created ? document.created|date('Y-m-d H:i:s') : '' }}</td>
                 <td>{{ document.updated ? document.updated|date('Y-m-d H:i:s') : '' }}</td>

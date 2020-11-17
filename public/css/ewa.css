@@ -288,7 +288,8 @@ button:hover{
 
 .photobanner, .photobanner2 {
     height: 55px;
-    width: 2000px;
+    width: 4600px;
+    /* bepalend voor aantal logog's dat is te zien*/
     margin-bottom: 5px;
     font-size: 0;
 }
@@ -333,27 +334,32 @@ button:hover{
 
 @keyframes bannermove{
     0% {margin-left: 0px;}
-    100% {margin-left: -1500px;}
+    100% {margin-left: -4250px;}
+    /* bepalend voor aantal logog's dat is te zien*/
 }
 
 @-moz-keyframes bannermove {
     0% {margin-left: 0px;}
-    100% {margin-left: -1500px;}
+    100% {margin-left: -4250px;}
+    /* bepalend voor aantal logog's dat is te zien*/
 }
 
 @-webkit-keyframes bannermove {
     0% {margin-left: 0px;}
-    100% {margin-left: -1500px;}
+    100% {margin-left: -4250px;}
+    /* bepalend voor aantal logog's dat is te zien*/
 }
 
 @-ms-keyframes bannermove {
     0% {margin-left: 0px;}
-    100% {margin-left: -1500px;}
+    100% {margin-left: -4250px;}
+    /* bepalend voor aantal logog's dat is te zien*/
 }
 
 @-o-keyframes bannermove {
     0% {margin-left: 0px;}
-    100% {margin-left: -1500px;}
+    100% {margin-left: -4250px;}
+    /* bepalend voor aantal logog's dat is te zien*/
 }
 
 
