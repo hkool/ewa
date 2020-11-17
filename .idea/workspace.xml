@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="c7880583-5491-4280-88e7-78599e7bf657" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine_migrations.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +235,7 @@
       <workItem from="1595794730527" duration="802000" />
       <workItem from="1595798570117" duration="1219000" />
       <workItem from="1595801253572" duration="2655000" />
-      <workItem from="1605629895813" duration="2736000" />
+      <workItem from="1605629895813" duration="3324000" />
     </task>
     <servers />
   </component>
@@ -250,9 +247,9 @@
       <screen x="65" y="0" width="1855" height="1080" />
     </state>
     <state x="816" y="367" key="com.intellij.ide.util.TipDialog/65.0.1855.1080@65.0.1855.1080" timestamp="1605629896733" />
-    <state x="815" y="174" width="586" height="732" key="find.popup" timestamp="1605637139249">
+    <state x="815" y="174" width="586" height="732" key="find.popup" timestamp="1605637451588">
       <screen x="65" y="0" width="1855" height="1080" />
     </state>
-    <state x="815" y="174" width="586" height="732" key="find.popup/65.0.1855.1080@65.0.1855.1080" timestamp="1605637139249" />
+    <state x="815" y="174" width="586" height="732" key="find.popup/65.0.1855.1080@65.0.1855.1080" timestamp="1605637451588" />
   </component>
 </project>
