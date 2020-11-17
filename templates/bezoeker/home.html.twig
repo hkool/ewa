@@ -2,7 +2,7 @@
 
 {% block headerintro %}
 <div class="page-header clear-filter">
-    <img src="images/EWAHaaglanden_bg.jpg" alt="EWA Haaglanden">
+    <img src="../images/EWAHaaglanden_bg.jpg" alt="EWA Haaglanden">
 </div>
 <section class="intro">
     <div class="container text-center" >
@@ -45,7 +45,7 @@
                          <div class="card-deck">
                          {% for nieuws in nieuwsberichten %}
                          <div class="card col-sm-12 col-lg-3 col-sm-6 ">
-                             <img class="card-img-top" src="images/news/{{ nieuws.image}}" alt="Card image cap">
+                             <img class="card-img-top" src="../images/news/{{ nieuws.image}}" alt="Card image cap">
                              <div class="card-img-overlay">
                                  <h5 class="card-title">{{nieuws.title}}</h5>
                                  <p class="card-text"><small class="text-muted"><a href="{{ path('showNieuwsdetail', {id: nieuws.id}) }}">Lees meer...</a></small></p>
@@ -145,8 +145,8 @@
             {% for partner in partners %}
 
                 {% if first == true  %}
-                    <img src="images/news/blanco.png" /> <img src="images/news/blanco.png" />
-                    <img class="first" src="{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />
+                    <img src="../images/news/blanco.png" /> <img src="../images/news/blanco.png" />
+                    <img class="first" src="../{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />
                     {% set first= false %}
                 {%  else %}
                     <img src="../{{  vich_uploader_asset(partner, 'imageFile') }}" alt="{{ partner.name }}" />
